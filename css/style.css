@@ -1,0 +1,622 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100&display=swap');
+*{
+   box-sizing: border-box;
+}
+body{
+   margin: 0;
+   padding: 0;
+   font-family: 'Montserrat Alternates', sans-serif;
+   background-color: rgb(4, 1, 5);
+   color: moccasin;
+}
+.container{
+  width: 1200px;
+  margin: 0 auto;
+}
+.row{
+  display: flex;
+}
+.first{
+  background-color:rgb(4, 1, 5);
+  margin-bottom: 400px;
+}
+
+.gana img{
+  width: 100%;
+  height: 100%;
+}
+/*Start Navbar*/
+nav{
+  height: 0;
+  position: relative;
+  z-index: 2;
+}
+nav .conten{
+  padding-top: 20px;
+}
+nav .list-1,
+nav .list-2{
+  flex: 40%;
+  max-width: 40%;
+}
+nav .list-1{
+  text-align: right;
+}
+nav .list-2{
+  text-align: left;
+}
+nav .logo{
+  flex: 20%;
+  max-width: 20%;
+  text-align: center;
+}
+nav .logo h2{
+  margin: -5px;
+  text-transform : uppercase;
+}
+nav ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav li{
+  display: inline-block;
+}
+nav li a{
+  text-decoration: none;
+  color:  moccasin;
+  margin-right: 17px;
+  padding: 5px;
+  font-size: 18px;
+  text-transform: capitalize;
+  position: relative;
+}
+/******الافكت علي اللينك********/
+nav li a span:first-child::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-top: 1px solid rgb(240, 11, 190);
+  border-left: 1px solid rgb(240, 11, 190);
+  transition: 1s;
+  opacity: 0;
+}
+nav li a span:last-child::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-bottom: 1px solid  rgb(240, 11, 190);
+  border-left: 1px solid  rgb(240, 11, 190);
+  transition: 1s;
+  opacity: 0;
+}
+nav li a span:first-child::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  border-top: 1px solid  rgb(240, 11, 190);
+  border-right: 1px solid  rgb(240, 11, 190);
+  transition: 1s;
+  opacity: 0;
+}
+nav li a span:last-child::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  border-bottom: 1px solid  rgb(240, 11, 190);
+  border-right: 1px solid  rgb(240, 11, 190);
+  transition: 1s;
+  opacity: 0;
+}
+/*********الهوفر علي اللينك *******/
+nav li a:hover span:first-child::before{
+  top: -10px;
+  left: -10px;
+  opacity: 1;
+}
+nav li a:hover span:last-child::after{
+  bottom: -10px;
+  left: -10px;
+  opacity: 1;
+}
+nav li a:hover span:first-child::after{
+  top: -10px;
+  right : -10px;
+  opacity: 1;
+}
+nav li a:hover span:last-child::before{
+  bottom: -10px;
+  right:  -10px;
+  opacity: 1;
+}
+/*End Navbar*/
+
+/*Start Hedar*/
+ .header{
+   background-image: url(../images/hradr-111.jpg);
+   z-index: 1;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 700px;
+   position: relative;
+ }
+ 
+ .header .info{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+ }
+ .header .info h2{
+   font-size: 90px;
+   margin-bottom: 0;
+ }
+ .header .info p{
+   font-size: 40px;
+   line-height: 1.5; 
+   margin-top: 10px;
+ }
+/*End hadre*/
+
+/*Start porfolio*/
+.porfolio .box{
+  height: auto;
+  flex: 33.3333%;
+  max-width: 33.3333%;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-bottom: .5px solid rgb(36, 9, 56);
+  
+}
+.porfolio .box:not(:nth-of-type(2)){
+  border-left: .5px solid rgb(36, 9, 56);
+  border-right: .5px solid rgb(36, 9, 56);
+}
+.porfolio .title h3{
+  font-size: 30px;
+  text-transform: capitalize;
+}
+.porfolio .box img{
+  width: 100%;
+  margin: 15px 0;
+}
+
+.porfolio .box:not(:nth-child(1)){
+  padding-top: 100px;
+}
+
+.porfolio .image-over:hover{
+  transform:scale(1.1);
+}
+.porfolio .overlay:hover{
+  opacity: 1;
+} 
+.porfolio .overlay{
+  opacity: 0;
+  transition: 1s;
+  cursor: pointer;
+}
+
+/*End portfolio*/
+/*Start brand*/
+.brands .brand{
+  flex: 20%;
+  max-width: 20%;
+  padding: 60px 15px 30px;
+
+}
+.brands .brand:nth-child(odd){/* اقتناص العنصر الفردي فقط*/
+  border-right: .5px solid rgb(36, 9, 56);
+  border-left: .5px solid rgb(36, 9, 56);
+}
+.brands .brand img{
+  width: 100%;
+}
+/*Start About*/
+.about{
+  margin-top:  120px;
+}
+.about .image{
+  flex: 66.6666%;
+  max-width: 66.6666%;
+  padding: 0 15px;
+  border-left: .5px solid rgb(36, 9, 56);
+  position: relative;
+
+}
+.about .image::after{ /* الفريم-- صوره خلفيه المنقطه*/
+  content: '';
+  position: absolute;
+  z-index: -1;
+  bottom: -30px;
+  right: 10px;
+  width: 250px;
+  height: 250px;
+  background-image: url(../images/dotted_light.png);
+}
+.about .info{
+  flex: 33.3333%;
+  max-width: 33.3333%;
+  padding: 0 15px;
+  border-right: .5px solid rgb(36, 9, 56);
+  border-left: .5px solid rgb(36, 9, 56);
+}
+.about .image img{
+  width: 90%;
+}
+.about .info h3{
+  font-size: 26px;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+.about .info p{
+  color: #ddd;
+  line-height:1.7;
+  padding-right: 70px;
+}
+
+
+/*End About*/
+/*Start Serfics*/
+
+.services{
+  margin-top: 130px;
+}
+.services .box{
+  flex: 33.3333%;
+  max-width: 33.3333%;
+  padding: 0 15px 0 40px;  
+}
+.services .box:not(:nth-of-type(2)){
+  border-right: .5px solid rgb(36, 9, 56);
+  border-left: .5px solid rgb(36, 9, 56);
+}
+.services .box .info{
+  margin-bottom: 50px;
+} 
+.services .box img{
+  width: 45px;
+  height: 45px;
+}
+.services .box  h5{
+  font-size: 23px;
+  margin: 10px 0;
+}
+.services .box p{
+  font-size: 18px;
+  color: #ccc;
+  padding-right: 80px;
+  line-height: 1.6;
+}
+/**End Servises**/
+/*Start Skills*/
+.skills{
+  margin-top: 120px;
+}
+.skills .skil{
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 15px;
+  margin-top: 20px;
+  text-align: center;
+  border-right: .5px solid rgb(36, 9, 56);
+  border-left: .5px solid rgb(36, 9, 56);
+}
+.skills  .min_span{
+  font-size: 90px;
+  font-weight: bold;
+}
+.skills .sup{
+  position: relative;
+  top: -50px;
+  font-size: 30px;
+}
+.skills p{
+  font-size: 16px;
+  font-weight: 900;
+  margin: 0;
+  margin-left: -30px;
+  text-transform: uppercase;
+}
+/*End Skills*/
+/*Start tesmonls*/
+.testmonals{
+  margin-top: 120px;
+}
+.testmonals .box{
+  background-color: #212121;
+  padding: 50px;
+  text-align: center;
+  box-shadow: 0 30px 0 -20px  rgb(240, 11, 190);
+}
+.testmonals span{
+  font-size: 90px;
+}
+.testmonals p{
+  font-size:22px;
+  line-height: 40px;
+  color: #ccc;
+}
+.testmonals .info{
+  text-align: center;
+  position: relative;
+  top: -45px;
+}
+.testmonals .info img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transition: 1s;
+  cursor: pointer;
+}
+.testmonals .info img:hover{
+  transform: scale(1.4); /*لعمل زوم للصوره عند وقوف الماوس*/
+  box-shadow: 0 0 5px rgb(240, 11, 190);
+}
+.testmonals .info h5{
+  margin: 15px 0 6px;
+  color: #ccc;
+  font-size: 19px;
+  text-transform: capitalize;
+}
+.testmonals .info span{
+  font-size: 13px;
+  color: #555;
+}
+.testmonals  .paginstin{
+  text-align: center;
+}
+.testmonals .paginstin span{
+   width: 8px;
+   height: 8px;
+   background-color: #999;
+   border-radius: 50%;
+   display: inline-block;
+   margin-right: 5px;
+   cursor: pointer;
+   transition: 1s;
+} 
+.testmonals .paginstin span.activ,
+.testmonals .paginstin span:hover{
+  background-color: rgb(240, 11, 190);
+}
+.testmonals .arrows{
+  position: relative;
+}
+.testmonals .arrows i{
+  position: absolute;
+  font-size: 22px;
+  top: -18px;
+  cursor: pointer;
+  transition: 1s;
+}
+.testmonals .arrows i:hover{
+  color: rgb(240, 11, 190);
+}
+.testmonals  .fa-chevron-left{
+  left: 0;
+}
+.testmonals  .fa-chevron-right{
+  right: 0;
+}
+/*End tesmonils*/
+
+/*Start Jornal*/
+.journal{
+  margin-top: 120px;
+}
+.journal .big{
+  flex: 66.6666%;
+  max-width: 66.6666%;
+  border-right: .5px solid rgb(36, 9, 56);
+  border-left: .5px solid rgb(36, 9, 56);
+  padding: 0 15px;
+}
+.journal .smail{
+  flex: 33.3333%;
+  max-width: 33.3333%;
+  border-right: .5px solid rgb(36, 9, 56);
+  padding: 0 15px;
+}
+.journal .row img{
+  width: 100%;
+  height: 320px;
+  margin-bottom: 30px;
+}
+.journal .ss{
+  flex: 50%;
+  max-width: 50%;
+}
+.journal .ss:first-of-type{
+  padding-right: 15px;
+}
+.journal .ss:last-of-type{
+  padding-left: 15px;
+  border-left: .5px solid rgb(36, 9, 56);
+}
+.journal .image-over:hover .overlay{
+  opacity: 0;
+}
+/*End Jornal*/
+
+/**Start contact*/
+.contact{
+  margin-top: 120px;
+  padding-bottom: 20px;
+}
+.contact .inputs{
+  flex: 66.6666%;
+  max-width: 66.6666%;
+  border-left: .5px solid rgb(36, 9, 56);
+  padding: 0 15px;
+}
+.contact .info{
+  flex: 33.3333%;
+  max-width: 33.3333%;
+  border-left: .5px solid rgb(36, 9, 56);
+  border-right: .5px solid rgb(36, 9, 56);
+  padding: 0 15px;
+}
+.contact .inputs  input{
+  background: none;
+  border: none;
+  border-bottom: 1px solid #666;
+  padding: 15px 0;
+  width: 47%;
+  margin-bottom: 30px;
+  outline: none;
+}
+.contact .inputs  input:first-of-type{
+  margin-right: 20px;
+}
+.contact .inputs  textarea{
+  background: none;
+  border: none;
+  border-bottom: 1px solid #666;
+  padding: 15px 0;
+  margin-bottom: 30px;
+  outline: none;
+  width: 100%;
+  height: 200px;
+}
+.contact .info span{
+  display: block ;
+}
+.contact .info .text{
+  margin-bottom: 30px;
+}
+.contact .info span:first-of-type{
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #888;
+  font-weight: 900;
+}
+.contact .info span:last-of-type{
+  font-size: 22px;
+  letter-spacing: 1px;
+  margin-top: 13px;
+  font-weight: bold;
+}
+/*End conact*/
+/*Start Footer*/
+.fixse{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+footer{
+  background-color: #222;
+  height: 400px;
+  text-align: center;
+  padding-top:  50px;
+}
+footer .sochial {
+  margin-bottom: 45px;
+}
+footer .sochial span{
+   margin-right: 20px;
+   font-weight: 800;
+   font-size: 14px;
+   text-transform: uppercase;
+   color: #999;
+}
+footer  p{
+  color: #999;
+}
+footer  p span{
+  font-weight: bold;
+}
+
+/*End Footer*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*00000000 FREMWERK 00000000*/
+
+
+ .overlay{/*الطبقه الضبايبه علي الصوره*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: 1s;
+  cursor: pointer;
+}
+.min_span{
+  color:  rgb(240, 11, 190);
+}
+.heding{
+  text-align: center;
+  margin-bottom: 50px;
+}
+.heding h2{
+  font-size: 32px;
+  text-transform: capitalize;
+  margin: 15px;
+}
+.heding img{
+  width: 100px;
+}
+
+.image-over{
+  position: relative;
+  transition: 2s;
+}
+.image-over .info{
+  position: absolute;
+  bottom: 45px;
+  left: 15px;
+}
+.image-over .info p{
+  font-size: 18px;
+  margin: 0 0 5px;
+}
+.image-over .info span{
+  color: #999;
+}
+/*الخواص المشتركه للزر*/
+.min-btn{
+  background: none;
+  color: #fff;
+  padding: 16px 25px;
+  border-radius: 50px;
+  border: 1px solid  rgb(36, 9, 56);
+  transition: 1s;
+  cursor: pointer;
+  margin-top: 40px;
+}
+.min-btn:hover{
+  transform: scale(1.05);/*حركه بروز الزر اثناء وقوف الماوس*/
+  color: rgb(240, 11, 190);
+  border: 1px solid  rgb(240, 11, 190);
+}
